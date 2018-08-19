@@ -1,0 +1,12 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <%= @music.title %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to(@user.username, profile_path(@user.id)) %></h5>
+    <p class="card-text"><b>Description: </b><%= @music.description %></p>
+    <audio src="<%= @music.file.url() %>" type="audio/mpeg" controls>
+        Your browser does not support audio
+    </audio>
+  </div>
+</div>

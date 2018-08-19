@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  
+
+  devise_for :users
+  root 'pages#home'
+  
+  resources :musics
+  
+  get '/profile/:id' => 'pages#profile', as: :profile
+  get '/home' => 'pages#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
